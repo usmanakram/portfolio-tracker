@@ -1,0 +1,2 @@
+DATABASE=mongodb://localhost/portfolio_tracker
+PORT=3000
