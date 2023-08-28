@@ -3,14 +3,21 @@ require('./db')();
 
 const http = require('http');
 const express = require('express');
+const { createHandler } = require('graphql-http/lib/use/express');
 
-const routesInit = require('./routes/init');
+const schema = require('./schema/schema');
+// const routesInit = require('./routes/init');
 
 const app = express();
 const server = http.createServer(app);
 
-// Initialize routes
-routesInit(app);
+app.use(
+  '/graphql',
+  createHandler({ schema })
+);
+
+// // Initialize routes
+// routesInit(app);
 
 const PORT = process.env.PORT || 3000;
 

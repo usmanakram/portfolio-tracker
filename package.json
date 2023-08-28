@@ -20,10 +20,12 @@
   "homepage": "https://github.com/usmanakram/portfolio-tracker#readme",
   "dependencies": {
     "debug": "^4.3.4",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "express-rate-limit": "^6.7.0",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.9.2"
+    "express-rate-limit": "^6.9.0",
+    "graphql": "^16.8.0",
+    "graphql-http": "^1.21.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.5"
   }
 }
