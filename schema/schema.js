@@ -4,12 +4,15 @@ const {
 } = require('graphql');
 
 const { users, user, addUser, updateUser, deleteUser } = require('./user');
+const { portfolios, portfolio, addPortfolio, updatePortfolio, deletePortfolio } = require('./portfolio');
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
     users,
     user,
+    portfolios,
+    portfolio,
   }
 });
 
@@ -17,12 +20,12 @@ const RootQuery = new GraphQLObjectType({
 const mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
-    // Add a user
-    addUser,
-    // Update user
-    updateUser,
-    // Delete a user
-    deleteUser,
+    addUser, // Add user
+    updateUser, // Update user
+    deleteUser, // Delete user
+    addPortfolio, // Add portfolio
+    updatePortfolio, // Update portfolio
+    deletePortfolio, // Delete portfolio
   }
 });
 
