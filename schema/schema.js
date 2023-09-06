@@ -5,6 +5,7 @@ const {
 
 const { users, user, addUser, updateUser, deleteUser } = require('./user');
 const { portfolios, portfolio, addPortfolio, updatePortfolio, deletePortfolio } = require('./portfolio');
+const { assets, asset, addAsset, updateAsset, deleteAsset } = require('./asset');
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
@@ -13,6 +14,8 @@ const RootQuery = new GraphQLObjectType({
     user,
     portfolios,
     portfolio,
+    assets,
+    asset,
   }
 });
 
@@ -26,6 +29,9 @@ const mutation = new GraphQLObjectType({
     addPortfolio, // Add portfolio
     updatePortfolio, // Update portfolio
     deletePortfolio, // Delete portfolio
+    addAsset, // Add asset
+    updateAsset, // Update asset
+    deleteAsset, // Delete asset
   }
 });
 
